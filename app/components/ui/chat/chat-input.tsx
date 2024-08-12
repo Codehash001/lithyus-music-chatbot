@@ -78,7 +78,7 @@ export default function ChatInput(
   return (
     <form
       onSubmit={onSubmit}
-      className="rounded-xl bg-white p-4 shadow-md space-y-4 shrink-0"
+      className="rounded-xl bg-white p-2 shadow-md space-y-4 shrink-0"
     >
       {imageUrl && (
         <UploadImagePreview url={imageUrl} onRemove={() => setImageUrl(null)} />
@@ -94,7 +94,7 @@ export default function ChatInput(
           ))}
         </div>
       )}
-      <div className="flex w-full items-start justify-between gap-4 ">
+      <div className="flex w-full items-start justify-between gap-2 ">
         <Input
           autoFocus
           name="message"
@@ -108,7 +108,7 @@ export default function ChatInput(
             <LlamaCloudSelector setRequestData={props.setRequestData} />
           )}
         <Button type="submit"  disabled={props.isLoading || !props.input.trim()}>
-          Send message
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="m21.426 11.095-17-8A1 1 0 0 0 3.03 4.242l1.212 4.849L12 12l-7.758 2.909-1.212 4.849a.998.998 0 0 0 1.396 1.147l17-8a1 1 0 0 0 0-1.81z"></path></svg>
         </Button>
       </div>
     </form>
